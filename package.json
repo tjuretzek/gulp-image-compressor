@@ -7,8 +7,8 @@
     "preinstall": "npm prune",
     "presetup": "source ~/.nvm/nvm.sh && nvm use",
     "setup": "sleep 1",
-    "postsetup": "npm install && gulp compress --watch",
-    "windows": "npm install && gulp compress --watch"
+    "postsetup": "npm install && npm start",
+    "windows": "npm install && npm start"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
     "imagemin-jpeg-recompress": "^5.1.0",
     "imagemin-jpegoptim": "^5.1.0",
     "imagemin-mozjpeg": "^6.0.0",
-    "imagemin-pngout": "^2.0.0",
+    "imagemin-pngquant": "^5.0.1",
     "gulp-newer": "^1.3.0",
     "gulp-util": "^3.0.8",
     "gulp-watch": "^4.3.11",
