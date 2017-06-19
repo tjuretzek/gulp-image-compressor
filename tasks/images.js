@@ -16,18 +16,17 @@ module.exports = function sync() {
       imagemin.optipng(),
       imagemin.svgo(),
       imageminPngquant({
-        speed: 2,
-        quality: 60-95
+        speed: 2
       }),
       imageminJpegoptim({
-        max: 60
+        max: 95
       }),
       imageminMozjpeg({
-        quality: 60
+        quality: 70
       }),
       imageminJpegRecompress({
         loops: 4,
-        min: 60,
+        min: 70,
         max: 95,
         quality:'high'
       })

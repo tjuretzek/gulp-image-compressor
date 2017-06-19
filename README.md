@@ -1,4 +1,14 @@
-# Image Compressor
+# Gulp Image Compressor
+This is lightweight image compressor (with little to no quality loss) on gulp basis using node.js. 
+The compression-rate is optimized for the best image quality:size ratio, but do not expect file sizes to be as small as lossy compressed (e.g. tinypng.org) images. 
+
+You can use this repository as a standalone image compressor or include it into your gulp routine by using the `images` task.
+
+This project was created to compress large amounts of files or images with a huge file size (e.g. 4K resolution images).
+
+
+*NOTE: Images may appear not as sharp as you want them to. You can always adjust the settings inside the tasks/images.js file, to increase quality AND filesize.*
+
 
 ## Development dependencies
 
