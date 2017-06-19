@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const newer = require('gulp-newer');
-const debug = require('gulp-debug');
+const plumber = require('gulp-plumber');
 const imagemin = require('gulp-imagemin');
 const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageminJpegoptim = require('imagemin-jpegoptim');
@@ -9,8 +9,8 @@ const imageminPngquant = require('imagemin-pngquant');
 
 module.exports = function sync() {
   return gulp.src(['original-images/**'])
+    .pipe(plumber())
     .pipe(newer('compressed-images'))
-    .pipe(debug({title: 'compressing:'}))
     .pipe(imagemin([
       imagemin.gifsicle(),
       imagemin.optipng(),
@@ -30,6 +30,8 @@ module.exports = function sync() {
         max: 95,
         quality:'high'
       })
-    ]))
+    ],{
+      verbose: true
+    }))
     .pipe(gulp.dest('compressed-images'));
 };
