@@ -16,7 +16,7 @@ module.exports = function sync() {
       imagemin.optipng(),
       imagemin.svgo(),
       imageminPngquant({
-        speed: 2
+        speed: 1
       }),
       imageminJpegoptim({
         max: 95
