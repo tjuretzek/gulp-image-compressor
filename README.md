@@ -65,18 +65,12 @@ npm run convert
 This command will generate `.webp` images from you .png, .jpg and .jpeg images.
 
 
-**!ATTENTION! You'll need imagemagic installed on your system**
-To install imagemagic via homebrew use
+**!ATTENTION! You'll need imagemagick installed on your system**
+To install imagemagick via homebrew use
 
 ``````````
-brew install imagemagic
+brew install imagemagick
 ``````````
-
-
-``````````
-gulp images
-``````````
-
 
 ### Wait for the compressor to finish
 
