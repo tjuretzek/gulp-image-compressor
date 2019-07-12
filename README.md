@@ -37,19 +37,41 @@ To compress all images inside the `original-images` folder just run
 npm start
 ``````````
  
- It will watch the `original-images` folder and compress the images as soon as you drop them into the folder.
 
 The `compressed-images` folder will be cleared every time you run the `npm run setup`, `npm run compress` or `npm start` command.
 
-### Compress without watcher
-For a one-time compress, without the watcher, just use:
+### Compress
+To compress your images, just use:
 
 ``````````
 npm run compress
+
 ``````````
 This will delete all images inside the `compressed-images` folder and recompress them.
 
 If you want to keep your compressed images and want to compress new ones, use: 
+
+``````````
+gulp images
+``````````
+
+### Convert
+If you want to use the .webp and jpeg-2000 converter, just use:
+
+``````````
+npm run convert
+``````````
+
+This command will generate `.webp` images from you .png, .jpg and .jpeg images.
+
+
+**!ATTENTION! You'll need imagemagic installed on your system**
+To install imagemagic via homebrew use
+
+``````````
+brew install imagemagic
+``````````
+
 
 ``````````
 gulp images
