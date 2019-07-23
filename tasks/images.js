@@ -7,8 +7,8 @@ const imageminJpegoptim = require('imagemin-jpegoptim');
 const imageminJpegRecompress = require('imagemin-jpeg-recompress');
 const imageminPngquant = require('imagemin-pngquant');
 
-module.exports = function sync() {
-  return gulp.src(['original-images/**'])
+module.exports = function images() {
+  return gulp.src(['original-images/**', 'temp-images/**' ])
     .pipe(plumber())
     .pipe(newer('compressed-images'))
     .pipe(imagemin([
@@ -29,7 +29,7 @@ module.exports = function sync() {
         min: 70,
         max: 95,
         quality:'high'
-      })
+      }),
     ],{
       verbose: true
     }))
